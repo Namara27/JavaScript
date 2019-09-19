@@ -1,0 +1,26 @@
+div.picture-holder {
+    box-sizing: border-box;
+    height: 450px;
+    width: 300px;
+    float: left;
+    background-color: rgb(245, 245, 245);
+}
+
+#pics {
+    width: 900px;
+    height: 1350px;
+    border: solid 1px black;
+    margin: auto;
+}
+
+div.fav {
+    width: 300px;
+    height: 150px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    text-align: center;
+}
