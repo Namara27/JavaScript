@@ -1,0 +1,20 @@
+#wrapper {
+    border: 2px solid black;
+    height: 900px;
+    width: 500px;
+}
+
+#headholder {
+    height: 300px;
+    width: 500px;
+}
+
+#noseholder {
+    height: 300px;
+    width: 500px;
+}
+
+#mouthholder {
+    height: 300px;
+    width: 500px;
+}
