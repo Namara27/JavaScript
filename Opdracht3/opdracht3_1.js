@@ -7,7 +7,7 @@ while (randomNumbers.length < 9) {
     if (randomNumbers.lastIndexOf(random) == -1) {
         randomNumbers.push(random);
     }
-    
+
 }
 random = 0;
 for (var picture in pictures) {
