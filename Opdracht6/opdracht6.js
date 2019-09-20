@@ -14,16 +14,31 @@ function createPictureHolder() {
 function card() {
     pictureHolders = document.getElementsByClassName("picture-holder");
     for (var i = 0; i < pictureHolders.length; i++) {
-        disneyplaatje = document.createElement("img");
-        disneyplaatje.src = "img/disney" + (i + 1) + ".jpg";
-        disneyplaatje.style.visibility = 'hidden'; //annoying piece of code
+        let disneyplaatje = document.createElement("img");
+        disneyplaatje.style.visibility = 'hidden';
+        disneyplaatje.src = "img/disney" + ((i % 9) + 1) + ".jpg";
         disneyplaatje.id = (i + 1);
-        disneyplaatje.addEventListener("click", show);
+        pictureHolders[i].addEventListener("click", function () {
+            show(disneyplaatje );
+        })
         pictureHolders[i].appendChild(disneyplaatje);
     }
 }
 
-function show() {
-    disneyplaatje.style.visibility = 'visible';
-    console.log("mlg 420 360 noscope")
+var ouddisneyplaatje
+var ouddisneyplaatje1
+function show(disneyplaatje ) {
+    if(ouddisneyplaatje && ouddisneyplaatje1) {
+        if(ouddisneyplaatje.src !== ouddisneyplaatje1.src) {
+            ouddisneyplaatje.style.visibility='hidden'
+            ouddisneyplaatje1.style.visibility='hidden'
+        }
+        ouddisneyplaatje = disneyplaatje
+        ouddisneyplaatje1 = undefined;
+    } else if(ouddisneyplaatje) {
+        ouddisneyplaatje1 = disneyplaatje;
+    } else {
+        ouddisneyplaatje = disneyplaatje;
+    }
+    disneyplaatje.style.visibility = 'visible'
 }
