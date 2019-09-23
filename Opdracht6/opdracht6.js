@@ -2,7 +2,7 @@ pictures = document.getElementById("pictures");
 createPictureHolder();
 card();
 
-var player = 'yes';
+var player = 'Player1';
 var player1 = 0;
 var player2 = 0;
 
@@ -54,13 +54,13 @@ function show(disneyplaatje) {
 
     if (ouddisneyplaatje && ouddisneyplaatje1) {
         if (ouddisneyplaatje.src !== ouddisneyplaatje1.src) {
-            if (player === 'yes') {
-                player = 'no';
+            if (player === 'Player1') {
+                player = 'Player2';
             } else {
-                player = 'yes';
+                player = 'Player1';
             }
         } else {
-            if (player === 'yes') {
+            if (player === 'Player1') {
                 player1 = player1 + 1;
             } else {
                 player2 = player2 + 1;
